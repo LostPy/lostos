@@ -1,0 +1,9 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
+
+type: default-flatpaks
+system:
+    install: # system flatpaks we want all users to have and not remove
+        - org.mozilla.firefox
+        - org.gnome.Loupe
+    notify: true # Send notification after install/uninstall is finished (true/false)
