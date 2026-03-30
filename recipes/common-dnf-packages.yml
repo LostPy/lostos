@@ -6,11 +6,22 @@ type: dnf
 repos:
   copr:
     - atim/starship
+    - atim/bottom
+    - varlad/zellij
 
 install:
   packages:
     - micro
+    - wl-clipboard
     - starship
+    - nu
+    - zellij
+    - helix
+    - bottom
+    - restic
+    - atuin
+    - bat
+    - fd-find
 
 remove:
   packages:
@@ -18,3 +29,11 @@ remove:
     # "firefox" is the main package, "firefox-langpacks" is a dependency
     - firefox
     - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+    # Added by ublue-os/siverblue-main and I don't want them
+    - vim # replaced by helix
+    - tmux # replaced by zellij
+    - htop # replace by bottom
+    - pam-u2f # not used
+    - pam_yubico # not used
+    - pam2fcfg # not used
+    - solaar-udev # not used
