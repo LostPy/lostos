@@ -1,5 +1,9 @@
 # lostos &nbsp; [![bluebuild build badge](https://github.com/lostpy/lostos/actions/workflows/build.yml/badge.svg)](https://github.com/lostpy/lostos/actions/workflows/build.yml)
 
+*lostos* is my personal [Universal Blue](https://universal-blue.org/) based OS with my main tools and flatpak applications pre-installed at system level.
+
+It is not intended for use by anyone else, but you are welcome to use it if you are interested.
+
 See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
 
 After setup, it is recommended you update this README to describe your custom image.
