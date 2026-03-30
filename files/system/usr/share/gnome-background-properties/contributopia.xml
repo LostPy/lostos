@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
+<wallpapers>
+  <wallpaper deleted="false">
+    <name>Contributopia</name>
+    <filename>/usr/share/backgrounds/lostos/contributopia.jpg</filename>
+    <filename-dark>/usr/share/backgrounds/lostos/contributopia.jpg</filename-dark>
+    <options>zoom</options>
+    <author>David Revoy</author>
+    <license>CC-BY 4.0</license>
+  </wallpaper>
+</wallpapers>
