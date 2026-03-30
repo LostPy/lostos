@@ -7,7 +7,7 @@ description: My personal OS image to easily keep preinstalled packages.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 42 # latest is also supported if you want new updates ASAP
+image-version: 43 # latest is also supported if you want new updates ASAP
 
 modules:
   - from-file: common-modules.yml
