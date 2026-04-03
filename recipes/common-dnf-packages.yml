@@ -22,6 +22,7 @@ install:
     - atuin
     - bat
     - fd-find
+    - zoxide
 
 remove:
   packages:
