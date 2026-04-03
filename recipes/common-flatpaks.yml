@@ -6,6 +6,8 @@ configurations:
   - scope: system
     install: # system flatpaks we want all users to have and not remove
       - org.gnome.Loupe
+      - org.gnome.Calendar
+      - org.gnome.Papers
       - com.belmoussaoui.Authenticator
       - io.github.kolunmi.Bazaar
       - io.github.flattool.Warehouse
