@@ -35,5 +35,9 @@ modules:
       - uv.sh
       - cargo.sh
 
+ - type: justfiles
+   validate: true
+   install: true
+
   - from-file: common-flatpaks.yml
   - from-file: common-dnf-packages.yml
