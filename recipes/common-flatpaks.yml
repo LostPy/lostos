@@ -8,6 +8,7 @@ configurations:
       - org.gnome.Loupe
       - org.gnome.Calendar
       - org.gnome.Papers
+      - io.github.cleomenezesjr.Serigy
       - com.belmoussaoui.Authenticator
       - io.github.kolunmi.Bazaar
       - io.github.flattool.Warehouse

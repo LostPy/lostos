@@ -21,7 +21,6 @@ modules:
     install:
       - Bluetooth battery indicator
       - Blur my Shell
-      - Clipboard History
       - GSConnect
       - gTile
       - Search Light
