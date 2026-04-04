@@ -7,6 +7,7 @@
 $env.PATH = ($env.PATH | split row (char esep)
     | prepend $'($env.HOME)/.atuin/bin'
     | prepend $'($env.HOME)/.cargo/bin'
+    | prepend '/root/.cargo/bin'
     | prepend $'($env.HOME)/.local/bin')
 
 # init shell tools
@@ -948,6 +949,8 @@ $env.config = {
         }
     ]
 }
+
+alias cargob = cargo-binstall
 
 source ~/.atuin.nu
 source ~/.starship.nu
