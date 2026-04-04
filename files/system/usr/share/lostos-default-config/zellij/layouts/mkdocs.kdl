@@ -1,0 +1,40 @@
+layout {
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+    tab_template name="ide_tab" {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane split_direction="Vertical" {
+            pane size="15%" name="Project Tree" command="env" {
+				args "YAZI_CONFIG_HOME=~/.config/zellij/yazi" "yazi"
+            }
+            children
+        }
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+	ide_tab name="Mkdocs" {
+		floating_panes {
+			pane name="Run" command="mkdocs" {
+                args "serve"
+            }
+			pane name="Terminal"
+		}
+		pane stacked=true {
+    		pane name="Helix Editor" command="hx" {
+                args "mkdocs.yml"
+                args "docs/index.md"
+            }
+			pane name="Git" command="gitui"
+		}
+	}
+}

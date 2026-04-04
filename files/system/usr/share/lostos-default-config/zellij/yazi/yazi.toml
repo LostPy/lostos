@@ -1,0 +1,24 @@
+[manager]
+ratio = [0, 1, 0]
+sort_by = "natural"
+sort_dir_first = true
+show_hidden = true
+show_symlink = true
+
+[opener]
+play = [
+  { run = 'mpv "$@"', orphan = true, for = "unix"}
+]
+edit = [
+  { run = 'hx "$@"', block = true}
+]
+open = [
+  { run = 'xdg-open "$@"', desc = "Open"}
+]
+
+[open]
+rules = [
+  { mime = "text/*", use = "edit" },
+  { mime = "video/*", use = "play" },
+  { name = "*.pdf", use = "open" }
+]

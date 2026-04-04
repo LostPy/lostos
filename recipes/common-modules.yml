@@ -33,6 +33,7 @@ modules:
   - type: script
     scripts:
       - uv.sh
+      - cargo.sh
 
   - from-file: common-flatpaks.yml
   - from-file: common-dnf-packages.yml

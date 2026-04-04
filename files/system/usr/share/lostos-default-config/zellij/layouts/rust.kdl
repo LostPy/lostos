@@ -1,0 +1,58 @@
+layout {
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+    
+    tab_template name="ide_tab" {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane split_direction="Vertical" {
+            pane size="15%" name="Project Tree" command="env" {
+				args "YAZI_CONFIG_HOME=~/.config/zellij/yazi" "yazi"
+            }
+
+            children
+            pane size="20%" stacked=true {
+            	pane name="AI Coding assitant" command="aider" expanded=true
+            	pane name="AI Editor Integration" command="aider" {
+            		args "--watch-files"
+            	}
+            }
+        }
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+	pane_template name="cargo" {
+		command "cargo"
+		start_suspended true
+	}
+	ide_tab name="Rust Editor" {
+		floating_panes {
+			cargo name="Check" {
+				args "check"
+				start_suspended false
+			}
+			cargo name="Tests" {
+				args "test"
+			}
+			cargo name="Run" {
+				args "run"
+			}
+			pane name="Terminal"
+		}
+		pane stacked=true {
+			pane name="Helix Editor" command="hx" expanded=true {
+				args "./src/main.rs"
+			}
+			pane name="Git" command="gitui"
+		}
+	}
+}

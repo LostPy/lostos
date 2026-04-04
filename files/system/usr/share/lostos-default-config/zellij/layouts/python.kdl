@@ -1,0 +1,62 @@
+layout {
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+    tab_template name="ide_tab" {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane split_direction="Vertical" {
+            pane size="15%" name="Project Tree" command="env" {
+    			args "YAZI_CONFIG_HOME=~/.config/zellij/yazi" "yazi"
+            }
+            children
+            pane size="20%" stacked=true {
+            	pane name="AI Coding assitant" command="aider" expanded=true
+            	pane name="AI Editor Integration" command="aider" {
+            		args "--watch-files"
+            	}
+            }
+        }
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+	ide_tab name="Python Editor" {
+		floating_panes {
+    	    pane name="Clean python cache" command="ruff" {
+    	        args "clean"
+    	        start_suspended true
+    	    }
+    	    pane name="Format" command="ruff" {
+    	        args "format"
+    	        start_suspended true
+    	    }
+    	    pane name="Analyze" command="ruff" {
+    	        args "analyze"
+    	        start_suspended true
+    	    }
+			pane name="Terminal"
+		}
+		pane stacked=true {
+    		pane name="Helix Editor" command="hx" focus=true {
+    		    args "pyproject.toml"
+    		}
+    	    pane name="Check" command="ruff" {
+    	        args "check"
+    	    }
+			pane name="Tests" command="pytest" start_suspended=true
+			pane name="Run" command="uv" {
+			    args "run"
+			    start_suspended true
+			}
+			pane name="Git" command="gitui"
+		}
+	}
+}
