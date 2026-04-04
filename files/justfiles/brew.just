@@ -1,3 +1,3 @@
 
 yazi:
-	brew install yazi
+  brew install yazi
