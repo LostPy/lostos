@@ -1,4 +1,4 @@
-all-preinstalled: nushell helix zellij
+all-preinstalled: nushell helix zellij terminal
     echo "config for preinstalled packages setup!"
 
 nushell:
@@ -12,3 +12,7 @@ zellij:
 
 yazi:
     cp -rf /usr/share/lostos-default-config/yazi/* ~/.config/yazi/
+
+terminal:
+    gsettings set org.gnome.Ptyxis.Profile:/org/gnome/Ptyxis/Profiles/$PTYXIS_PROFILE/ use-custom-command true
+    gsettings set org.gnome.Ptyxis.Profile:/org/gnome/Ptyxis/Profiles/$PTYXIS_PROFILE/ custom-command nu
