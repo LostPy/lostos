@@ -20,5 +20,9 @@ modules:
       - gTile
       - Search Light
 
+  - type: brew
+    brew-analytics: false
+    auto-update: true
+
   - from-file: common-flatpaks.yml
   - from-file: common-dnf-packages.yml
