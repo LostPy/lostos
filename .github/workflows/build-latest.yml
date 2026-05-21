@@ -30,7 +30,7 @@ jobs:
           - recipe.yml
     steps:
       # the build is fully handled by the reusable github action
-      - name: Build Custom Image
+      - name: Build Latest lostos Image
         uses: blue-build/github-action@v1.11
         with:
           recipe: ${{ matrix.recipe }}
