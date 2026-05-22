@@ -23,7 +23,6 @@ modules:
       - Blur my Shell
       - GSConnect
       - gTile
-      - Search Light
 
   - type: brew
     brew-analytics: false
