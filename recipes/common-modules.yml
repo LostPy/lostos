@@ -19,7 +19,7 @@ modules:
 
   - type: gnome-extensions
     install:
-      - Bluetooth battery indicator
+      - Bluetooth Battery Monitor
       - Blur my Shell
       - GSConnect
       - gTile
