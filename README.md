@@ -1,4 +1,4 @@
-# lostos &nbsp; [![bluebuild build badge](https://github.com/lostpy/lostos/actions/workflows/build.yml/badge.svg)](https://github.com/lostpy/lostos/actions/workflows/build.yml)
+# lostos &nbsp; [![bluebuild lastest build badge](https://github.com/lostpy/lostos/actions/workflows/build-latest.yml/badge.svg)](https://github.com/lostpy/lostos/actions/workflows/build-latest.yml) [![bluebuild on tag build badge](https://github.com/lostpy/lostos/actions/workflows/build-on-tag.yml/badge.svg)](https://github.com/lostpy/lostos/actions/workflows/build-on-tag.yml)
 
 *lostos* is my personal [Universal Blue](https://universal-blue.org/) based OS with my main tools and flatpak applications pre-installed at system level.
 
