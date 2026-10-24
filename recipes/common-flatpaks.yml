@@ -8,7 +8,7 @@ configurations:
       - org.gnome.Loupe
       - org.gnome.Calendar
       - org.gnome.Papers
-      - io.github.cleomenezesjr.Serigy
+      - org.gnome.Maps
       - com.belmoussaoui.Authenticator
       - io.github.kolunmi.Bazaar
       - io.github.flattool.Warehouse
@@ -21,6 +21,5 @@ configurations:
       - io.github.sigmasd.share
       - io.github.alainm23.planify
       - org.gnome.Showtime
-      - com.github.neithern.g4music
     notify: true # Send notification after install/uninstall is finished (true/false)
   - scope: user # Also add Flathub user repo, but no user packages
